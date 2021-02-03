@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      <%= htmlWebpackPlugin.options.title %>
+    </title>
+  </head>
+
+  <body>
+
+    <%= require('html-loader!./common/header.html') %>
+
+      <div>HOME</div>
+
+      <%= require('html-loader!./common/footer.html') %>
+  </body>
+
+</html>
