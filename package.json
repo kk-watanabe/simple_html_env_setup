@@ -15,8 +15,10 @@
     "@storybook/addon-actions": "^6.1.17",
     "@storybook/addon-essentials": "^6.1.17",
     "@storybook/addon-links": "^6.1.17",
-    "@storybook/html": "^6.1.17",
-    "babel-loader": "^8.2.2"
+    "@storybook/svelte": "^6.1.17",
+    "babel-loader": "^8.2.2",
+    "svelte": "^3.32.1",
+    "svelte-loader": "^3.0.0"
   },
   "dependencies": {}
 }
