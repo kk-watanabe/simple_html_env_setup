@@ -4,9 +4,19 @@
   "description": "この Repository は、HTML コーディングするための簡易セットアップな Repository です。",
   "main": "index.js",
   "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@storybook/addon-actions": "^6.1.17",
+    "@storybook/addon-essentials": "^6.1.17",
+    "@storybook/addon-links": "^6.1.17",
+    "@storybook/html": "^6.1.17",
+    "babel-loader": "^8.2.2"
+  },
+  "dependencies": {}
 }
