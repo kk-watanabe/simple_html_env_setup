@@ -1,5 +1,7 @@
-<script>
+<script lang="ts">
   import { createEventDispatcher } from "svelte";
+
+  export let width: string = "auto";
   /**
    * Is this the principal call to action on the page?
    */
@@ -22,7 +24,10 @@
     ? "storybook-button--primary"
     : "storybook-button--secondary";
 
-  let style = backgroundColor ? `background-color: ${backgroundColor}` : "";
+  let style = {
+    width: width,
+    backgroundColor: backgroundColor,
+  };
 
   const dispatch = createEventDispatcher();
 

@@ -1,3 +1,5 @@
+const sveltePreprocess = require('svelte-preprocess');
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -5,7 +7,7 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    { name: "@storybook/addon-essentials", options: { docs: false } }
   ],
   typescript: {
     check: false,
@@ -15,5 +17,10 @@ module.exports = {
       shouldExtractLiteralValuesFromEnum: true,
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
     },
+  },
+  webpackFinal: async (config) => {
+    const svelteLoader = config.module.rules.find( (r) => r.loader && r.loader.includes('svelte-loader'))
+    svelteLoader.options.preprocess = require('svelte-preprocess')()
+    return config
   },
 }

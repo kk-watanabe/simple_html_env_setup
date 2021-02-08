@@ -1,7 +1,7 @@
 import Button from './Button.svelte';
 
 export default {
-  title: 'Example/Button',
+  title: 'components/Atom/Button',
   component: Button,
   argTypes: {
     label: { control: 'text' },
