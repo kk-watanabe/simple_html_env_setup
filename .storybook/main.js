@@ -1,13 +1,9 @@
-const path = require('path')
+const path = require("path")
 
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  "addons": [
-    "@storybook/addon-links",
-    { name: "@storybook/addon-essentials", options: { docs: false } }
   ],
   typescript: {
     check: false,
@@ -27,4 +23,8 @@ module.exports = {
     svelteLoader.options.preprocess = require('svelte-preprocess')()
     return config
   },
+  "addons": [
+    "@storybook/addon-links",
+    { name: "@storybook/addon-essentials", options: { docs: true } }
+  ],
 }

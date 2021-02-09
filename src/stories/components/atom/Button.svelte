@@ -24,10 +24,7 @@
     ? "storybook-button--primary"
     : "storybook-button--secondary";
 
-  let style = {
-    width: width,
-    backgroundColor: backgroundColor,
-  };
+  let style = `width: ${width}; background-color: ${backgroundColor}`;
 
   const dispatch = createEventDispatcher();
 
