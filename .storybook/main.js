@@ -1,4 +1,4 @@
-const sveltePreprocess = require('svelte-preprocess');
+const path = require('path')
 
 module.exports = {
   "stories": [
@@ -19,6 +19,10 @@ module.exports = {
     },
   },
   webpackFinal: async (config) => {
+    config.resolve.alias = {
+      '@': path.resolve(__dirname, '../src')
+    }
+
     const svelteLoader = config.module.rules.find( (r) => r.loader && r.loader.includes('svelte-loader'))
     svelteLoader.options.preprocess = require('svelte-preprocess')()
     return config
